@@ -1,0 +1,9 @@
+# Escape key is C-t, literal is .a
+escape ^Ta
+# I like a large scrollback buffer.
+defscrollback 1000
+# don't show startup message.
+startup_message off
+# tab
+hardstatus alwayslastline "%{= wg} %-w%{=bu dr}%n %t%{-}%+w %= %{=b kw} %Y/%m/%d %0c"
+sorendition "+rb .G"
