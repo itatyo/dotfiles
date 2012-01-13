@@ -4,8 +4,17 @@ startup_message off
 autodetach on
 hardstatus alwayslastline "%{= wg} %-w%{=bu dr}%n %t%{-}%+w %= %{=b kw} %Y/%m/%d %0c"
 sorendition "+rb .G"
-### for Windows
+### start keybind
+markkeys h=^b:l=^f:0=^a:j=^n:k=^p:$=^e:^d=^v
+bindkey -m ^[v stuff P
+bindkey -m ^[< stuff g
+bindkey -m ^[> stuff G
+bindkey -m ^k stuff ' $ '
+bindkey -m ^g stuff !
+bindkey -m ^[b stuff B
+bindkey -m ^[f stuff E
+# for Windows
 bindkey -m ' ' eval 'stuff \040' 'writebuf' 'exec sh -c "/usr/bin/putclip < /tmp/screen-exchange"'
 bindkey -m Y   eval 'stuff Y'    'writebuf' 'exec sh -c "/usr/bin/putclip < /tmp/screen-exchange"'
 bindkey -m W   eval 'stuff W'    'writebuf' 'exec sh -c "/usr/bin/putclip < /tmp/screen-exchange"'
-
+### end keybind
